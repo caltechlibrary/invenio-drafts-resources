@@ -142,6 +142,10 @@ class VersionsManager:
         self.state().latest_index = self.index
         self.state().next_draft_id = None
 
+    def set_index(self, index):
+        """Set a specific index to enable version reordering."""
+        self._record.model.index = index
+
     #
     # Dump/load
     #
